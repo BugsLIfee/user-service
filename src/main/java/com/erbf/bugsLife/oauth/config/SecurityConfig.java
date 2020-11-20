@@ -137,6 +137,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         .and()
                     .redirectionEndpoint()
                         .baseUri("/oauth2/callback/*")
+
                         .and()
                     .userInfoEndpoint()
                         .userService(customOAuth2UserService)
