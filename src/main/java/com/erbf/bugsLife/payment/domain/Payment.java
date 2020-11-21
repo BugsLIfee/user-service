@@ -1,6 +1,8 @@
 package com.erbf.bugsLife.payment.domain;
 
+import com.erbf.bugsLife.oauth.model.User;
 import com.erbf.bugsLife.payment.application.web.PaymentDto;
+import com.nimbusds.openid.connect.sdk.claims.UserInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,6 +36,15 @@ public class Payment {
     private int amount;
     private String buyerEmail;
     private String paymentDate;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public void addUser(User user) {
+        this.user = user;
+        user.getPaymentList().add(this);
+    }
 
     public PaymentDto toDto() {
         PaymentDto paymentDto = PaymentDto.builder()
