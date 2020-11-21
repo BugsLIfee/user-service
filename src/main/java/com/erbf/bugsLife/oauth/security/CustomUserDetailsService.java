@@ -23,7 +23,7 @@ public class CustomUserDetailsService implements UserDetailsService {
             throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() ->
-                        new UsernameNotFoundException("�ش� �̸����� �������� �ʽ��ϴ�. : " + email)
+                        new UsernameNotFoundException(" 해당 계정을 찾을 수 없습니다. : " + email)
         );
 
         return UserPrincipal.create(user);

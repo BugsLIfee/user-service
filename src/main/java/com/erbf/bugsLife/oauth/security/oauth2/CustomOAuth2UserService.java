@@ -17,6 +17,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -69,6 +70,8 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         		.name(oAuth2UserInfo.getName())
         		.role(oAuth2UserInfo.getRole().USER)
         		.email(oAuth2UserInfo.getEmail())
+                .enrollDate(LocalDateTime.now())
+                .emailVerified(true)
         		.imageUrl(oAuth2UserInfo.getImageUrl())
         		.build();
         return userRepository.save(user);

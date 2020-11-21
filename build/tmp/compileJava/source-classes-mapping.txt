@@ -34,16 +34,16 @@ com/erbf/bugsLife/oauth/security/oauth2/user/OAuth2UserInfo.java
  com.erbf.bugsLife.oauth.security.oauth2.user.OAuth2UserInfo
 com/erbf/bugsLife/attendance/service/AttendanceService.java
  com.erbf.bugsLife.attendance.service.AttendanceService
-com/erbf/bugsLife/oauth/security/CustomUserDetailsService.java
- com.erbf.bugsLife.oauth.security.CustomUserDetailsService
+com/erbf/bugsLife/oauth/security/oauth2/OAuth2AuthenticationSuccessHandler.java
+ com.erbf.bugsLife.oauth.security.oauth2.OAuth2AuthenticationSuccessHandler
 com/erbf/bugsLife/attendance/application/web/dto/AttendanceDto.java
  com.erbf.bugsLife.attendance.application.web.dto.AttendanceDto
  com.erbf.bugsLife.attendance.application.web.dto.AttendanceDto$AttendanceDtoBuilder
 com/erbf/bugsLife/attendance/domain/Attendance.java
  com.erbf.bugsLife.attendance.domain.Attendance
  com.erbf.bugsLife.attendance.domain.Attendance$AttendanceBuilder
-com/erbf/bugsLife/oauth/config/SecurityConfig.java
- com.erbf.bugsLife.oauth.config.SecurityConfig
+com/erbf/bugsLife/oauth/controller/AuthController.java
+ com.erbf.bugsLife.oauth.controller.AuthController
 com/erbf/bugsLife/oauth/payload/SignUpRequest.java
  com.erbf.bugsLife.oauth.payload.SignUpRequest
 com/erbf/bugsLife/oauth/util/CookieUtils.java
@@ -90,8 +90,8 @@ com/erbf/bugsLife/payment/domain/Payment.java
  com.erbf.bugsLife.payment.domain.Payment$PaymentBuilder
 com/erbf/bugsLife/mypage/service/logic/MypageServiceImp.java
  com.erbf.bugsLife.mypage.service.logic.MypageServiceImp
-com/erbf/bugsLife/oauth/security/oauth2/CustomOAuth2UserService.java
- com.erbf.bugsLife.oauth.security.oauth2.CustomOAuth2UserService
+com/erbf/bugsLife/oauth/security/TokenProvider.java
+ com.erbf.bugsLife.oauth.security.TokenProvider
 com/erbf/bugsLife/payment/service/logic/PaymentServiceImpl.java
  com.erbf.bugsLife.payment.service.logic.PaymentServiceImpl
 com/erbf/bugsLife/mypage/application/web/dto/UserDto.java
@@ -116,9 +116,9 @@ com/erbf/bugsLife/oauth/exception/OAuth2AuthenticationProcessingException.java
  com.erbf.bugsLife.oauth.exception.OAuth2AuthenticationProcessingException
 com/erbf/bugsLife/oauth/security/TokenAuthenticationFilter.java
  com.erbf.bugsLife.oauth.security.TokenAuthenticationFilter
-com/erbf/bugsLife/oauth/security/TokenProvider.java
- com.erbf.bugsLife.oauth.security.TokenProvider
-com/erbf/bugsLife/oauth/controller/AuthController.java
- com.erbf.bugsLife.oauth.controller.AuthController
-com/erbf/bugsLife/oauth/security/oauth2/OAuth2AuthenticationSuccessHandler.java
- com.erbf.bugsLife.oauth.security.oauth2.OAuth2AuthenticationSuccessHandler
+com/erbf/bugsLife/oauth/config/SecurityConfig.java
+ com.erbf.bugsLife.oauth.config.SecurityConfig
+com/erbf/bugsLife/oauth/security/oauth2/CustomOAuth2UserService.java
+ com.erbf.bugsLife.oauth.security.oauth2.CustomOAuth2UserService
+com/erbf/bugsLife/oauth/security/CustomUserDetailsService.java
+ com.erbf.bugsLife.oauth.security.CustomUserDetailsService
