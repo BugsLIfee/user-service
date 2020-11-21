@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 @AllArgsConstructor
@@ -15,6 +16,7 @@ public class PaymentDto {
 
     private Long id;
     private String pg;
+    private Long userId;
     private String payMethod;
     private String merchantUid;
     private int amount;
