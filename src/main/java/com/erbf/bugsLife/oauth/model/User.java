@@ -147,6 +147,8 @@ public class User {
                 .level(this.level)
                 .role(this.role.getName())
                 .isAttend(this.isAttend)
+                .attendCnt(this.attendCnt)
+                .attenBefore(this.attenBefore)
                 .enrollDate(this.enrollDate)
                 .status(this.status)
                 .pointList(this.pointList.stream().map(Point::toDto).collect(Collectors.toList()))
