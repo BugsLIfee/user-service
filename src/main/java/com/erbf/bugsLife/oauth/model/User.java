@@ -144,6 +144,7 @@ public class User {
                 .emailVerified(this.emailVerified)
                 .point(this.point)
                 .level(this.level)
+                .role(this.role.getName())
                 .enrollDate(this.enrollDate)
                 .status(this.status)
                 .pointList(this.pointList.stream().map(Point::toDto).collect(Collectors.toList()))
