@@ -60,10 +60,11 @@ public class AttendanceController {
             user.get().deleteAttnCnt();
 
         Gson json = new Gson();
-        System.out.println("printout User info========" + json.toJson(user));
+//        System.out.println("printout User info========" + json.toJson(user));
 
         //출석한 유저 찾아서 isAttend == true로 바꿔주기
         userRepo.save(user.get().attendDone(true));
+        System.out.println("printout User info========" + json.toJson(user));
 
         return new ResponseEntity<>("Success", HttpStatus.OK);
     }
