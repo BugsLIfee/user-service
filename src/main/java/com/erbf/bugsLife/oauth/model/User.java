@@ -54,7 +54,7 @@ public class User {
 
     private Boolean isAttend = false;
     private int attendCnt =0;
-    private Boolean attnBefore= false;
+    private Boolean attenBefore= false;
 
     @JsonIgnore
     private String password;
@@ -104,15 +104,15 @@ public class User {
         return this;
     }
 
-    public User attndBefore(Boolean check){
-        this.attnBefore = check;
+    public User attenBefore(Boolean check){
+        this.attenBefore = check;
         return this;
     }
 
 
     @Builder
 	public User(Long id, String name, @Email String email, String imageUrl,
-                Boolean emailVerified, Boolean isAttend, Boolean attnBefore, int attendCnt,
+                Boolean emailVerified, Boolean isAttend, Boolean attenBefore, int attendCnt,
                 String password, @NotNull AuthProvider provider, String providerId,
                 int point, Role role, int level, LocalDateTime enrollDate, int status,
                 List<Point> pointList, List<Payment> paymentList) {
@@ -129,6 +129,7 @@ public class User {
 		this.level = level;
 		this.isAttend = isAttend;
 		this.attendCnt = attendCnt;
+        this.attenBefore= attenBefore;
 		this.enrollDate = enrollDate;
 		this.status = status;
 		this.paymentList = paymentList;
@@ -145,6 +146,7 @@ public class User {
                 .point(this.point)
                 .level(this.level)
                 .role(this.role.getName())
+                .isAttend(this.isAttend)
                 .enrollDate(this.enrollDate)
                 .status(this.status)
                 .pointList(this.pointList.stream().map(Point::toDto).collect(Collectors.toList()))
