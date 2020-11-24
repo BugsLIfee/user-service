@@ -73,6 +73,9 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
                 .enrollDate(LocalDateTime.now())
                 .emailVerified(true)
         		.imageUrl(oAuth2UserInfo.getImageUrl())
+                .attendBefore(false)
+                .attendCnt(0)
+                .isAttend(false)
         		.build();
         return userRepository.save(user);
     }

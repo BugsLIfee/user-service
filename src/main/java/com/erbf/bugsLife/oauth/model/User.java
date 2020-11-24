@@ -54,7 +54,7 @@ public class User {
 
     private Boolean isAttend = false;
     private int attendCnt =0;
-    private Boolean attenBefore= false;
+    private Boolean attendBefore= false;
 
     @JsonIgnore
     private String password;
@@ -104,15 +104,15 @@ public class User {
         return this;
     }
 
-    public User attenBefore(Boolean check){
-        this.attenBefore = check;
+    public User attendBefore(Boolean check){
+        this.attendBefore = check;
         return this;
     }
 
 
     @Builder
 	public User(Long id, String name, @Email String email, String imageUrl,
-                Boolean emailVerified, Boolean isAttend, Boolean attenBefore, int attendCnt,
+                Boolean emailVerified, Boolean isAttend, Boolean attendBefore, int attendCnt,
                 String password, @NotNull AuthProvider provider, String providerId,
                 int point, Role role, int level, LocalDateTime enrollDate, int status,
                 List<Point> pointList, List<Payment> paymentList) {
@@ -129,7 +129,7 @@ public class User {
 		this.level = level;
 		this.isAttend = isAttend;
 		this.attendCnt = attendCnt;
-        this.attenBefore= attenBefore;
+        this.attendBefore= attendBefore;
 		this.enrollDate = enrollDate;
 		this.status = status;
 		this.paymentList = paymentList;
@@ -142,13 +142,13 @@ public class User {
                 .name(this.name)
                 .email(this.email)
                 .imageUrl(this.imageUrl)
+                .isAttend(this.isAttend)
+                .attendBefore(this.attendBefore)
+                .attendCnt(this.attendCnt)
                 .emailVerified(this.emailVerified)
                 .point(this.point)
                 .level(this.level)
                 .role(this.role.getName())
-                .isAttend(true)
-                .attendCnt(1)
-                .attenBefore(false)
                 .enrollDate(this.enrollDate)
                 .status(this.status)
                 .pointList(this.pointList.stream().map(Point::toDto).collect(Collectors.toList()))

@@ -72,6 +72,9 @@ public class AuthController {
         	.emailVerified(false)
         	.provider(AuthProvider.local)
         	.role(Role.USER)
+            .isAttend(false)
+            .attendBefore(false)
+            .attendCnt(0)
         	.enrollDate(LocalDateTime.now())
         	.password(passwordEncoder.encode(signUpRequest.getPassword()))
         	.build();
@@ -83,7 +86,7 @@ public class AuthController {
                 .buildAndExpand(result.getId()).toUri();
 
         return ResponseEntity.created(location)
-                .body(new ApiResponse(true, " ȸ�������� �Ϸ�Ǿ����ϴ� !"));
+                .body(new ApiResponse(true , "가입완료"));
     }
 
 
