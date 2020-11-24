@@ -1,14 +1,14 @@
-com/erbf/bugsLife/oauth/security/CurrentUser.java
- com.erbf.bugsLife.oauth.security.CurrentUser
-com/erbf/bugsLife/oauth/security/oauth2/OAuth2AuthenticationSuccessHandler.java
- com.erbf.bugsLife.oauth.security.oauth2.OAuth2AuthenticationSuccessHandler
-com/erbf/bugsLife/oauth/security/oauth2/user/FacebookOAuth2UserInfo.java
- com.erbf.bugsLife.oauth.security.oauth2.user.FacebookOAuth2UserInfo
-com/erbf/bugsLife/oauth/security/oauth2/user/OAuth2UserInfoFactory.java
- com.erbf.bugsLife.oauth.security.oauth2.user.OAuth2UserInfoFactory
+com/erbf/bugsLife/oauth/payload/ApiResponse.java
+ com.erbf.bugsLife.oauth.payload.ApiResponse
 com/erbf/bugsLife/mypage/domain/user/User.java
  com.erbf.bugsLife.mypage.domain.user.User
  com.erbf.bugsLife.mypage.domain.user.User$UserBuilder
+com/erbf/bugsLife/oauth/security/oauth2/user/OAuth2UserInfoFactory.java
+ com.erbf.bugsLife.oauth.security.oauth2.user.OAuth2UserInfoFactory
+com/erbf/bugsLife/oauth/security/oauth2/user/FacebookOAuth2UserInfo.java
+ com.erbf.bugsLife.oauth.security.oauth2.user.FacebookOAuth2UserInfo
+com/erbf/bugsLife/oauth/security/oauth2/OAuth2AuthenticationSuccessHandler.java
+ com.erbf.bugsLife.oauth.security.oauth2.OAuth2AuthenticationSuccessHandler
 com/erbf/bugsLife/payment/repository/PaymentRepository.java
  com.erbf.bugsLife.payment.repository.PaymentRepository
 com/erbf/bugsLife/oauth/security/TokenProvider.java
@@ -31,10 +31,10 @@ com/erbf/bugsLife/mypage/store/MypageStore.java
  com.erbf.bugsLife.mypage.store.MypageStore
 com/erbf/bugsLife/oauth/security/TokenAuthenticationFilter.java
  com.erbf.bugsLife.oauth.security.TokenAuthenticationFilter
-com/erbf/bugsLife/oauth/payload/ApiResponse.java
- com.erbf.bugsLife.oauth.payload.ApiResponse
 com/erbf/bugsLife/mypage/service/logic/MypageServiceImp.java
  com.erbf.bugsLife.mypage.service.logic.MypageServiceImp
+com/erbf/bugsLife/oauth/security/CurrentUser.java
+ com.erbf.bugsLife.oauth.security.CurrentUser
 com/erbf/bugsLife/oauth/config/AppProperties.java
  com.erbf.bugsLife.oauth.config.AppProperties
  com.erbf.bugsLife.oauth.config.AppProperties$Auth
@@ -52,12 +52,12 @@ com/erbf/bugsLife/attendance/application/web/dto/AttendanceDto.java
  com.erbf.bugsLife.attendance.application.web.dto.AttendanceDto$AttendanceDtoBuilder
 com/erbf/bugsLife/oauth/exception/OAuth2AuthenticationProcessingException.java
  com.erbf.bugsLife.oauth.exception.OAuth2AuthenticationProcessingException
+com/erbf/bugsLife/oauth/util/CookieUtils.java
+ com.erbf.bugsLife.oauth.util.CookieUtils
 com/erbf/bugsLife/oauth/config/SecurityConfig.java
  com.erbf.bugsLife.oauth.config.SecurityConfig
 com/erbf/bugsLife/oauth/payload/SignUpRequest.java
  com.erbf.bugsLife.oauth.payload.SignUpRequest
-com/erbf/bugsLife/oauth/util/CookieUtils.java
- com.erbf.bugsLife.oauth.util.CookieUtils
 com/erbf/bugsLife/oauth/security/oauth2/user/GoogleOAuth2UserInfo.java
  com.erbf.bugsLife.oauth.security.oauth2.user.GoogleOAuth2UserInfo
 com/erbf/bugsLife/mypage/service/MypageService.java
@@ -84,19 +84,19 @@ com/erbf/bugsLife/point/repository/PointRepository.java
  com.erbf.bugsLife.point.repository.PointRepository
 com/erbf/bugsLife/attendance/service/logic/AttendanceServiceImpl.java
  com.erbf.bugsLife.attendance.service.logic.AttendanceServiceImpl
-com/erbf/bugsLife/mypage/application/web/MypageController.java
- com.erbf.bugsLife.mypage.application.web.MypageController
 com/erbf/bugsLife/oauth/exception/ResourceNotFoundException.java
  com.erbf.bugsLife.oauth.exception.ResourceNotFoundException
+com/erbf/bugsLife/mypage/application/web/MypageController.java
+ com.erbf.bugsLife.mypage.application.web.MypageController
 com/erbf/bugsLife/mypage/store/logic/MypageStoreJpaImp.java
  com.erbf.bugsLife.mypage.store.logic.MypageStoreJpaImp
+com/erbf/bugsLife/mypage/store/repository/MypageStoreJpaRepository.java
+ com.erbf.bugsLife.mypage.store.repository.MypageStoreJpaRepository
+com/erbf/bugsLife/attendance/repositoty/AttendanceRepository.java
+ com.erbf.bugsLife.attendance.repositoty.AttendanceRepository
 com/erbf/bugsLife/attendance/domain/Attendance.java
  com.erbf.bugsLife.attendance.domain.Attendance
  com.erbf.bugsLife.attendance.domain.Attendance$AttendanceBuilder
-com/erbf/bugsLife/attendance/repositoty/AttendanceRepository.java
- com.erbf.bugsLife.attendance.repositoty.AttendanceRepository
-com/erbf/bugsLife/mypage/store/repository/MypageStoreJpaRepository.java
- com.erbf.bugsLife.mypage.store.repository.MypageStoreJpaRepository
 com/erbf/bugsLife/payment/application/web/PaymentController.java
  com.erbf.bugsLife.payment.application.web.PaymentController
 com/erbf/bugsLife/oauth/dto/UserDto.java

@@ -142,13 +142,19 @@ public class User {
                 .name(this.name)
                 .email(this.email)
                 .imageUrl(this.imageUrl)
+                .isAttend(this.isAttend)
+                .attenBefore(this.attnBefore)
+                .attendCnt(this.attendCnt)
                 .emailVerified(this.emailVerified)
                 .point(this.point)
                 .level(this.level)
                 .role(this.role.getName())
+<<<<<<< HEAD
+=======
                 .isAttend(true)
                 .attendCnt(1)
                 .attenBefore(false)
+>>>>>>> 0ff33a2cfbec880dbc7d085e77c60ae7422aba04
                 .enrollDate(this.enrollDate)
                 .status(this.status)
                 .pointList(this.pointList.stream().map(Point::toDto).collect(Collectors.toList()))
