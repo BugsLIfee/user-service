@@ -9,6 +9,7 @@ import com.erbf.bugsLife.oauth.repository.UserRepository;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -54,7 +55,7 @@ public class AttendanceController {
 
         //전에도 출석했었나 체크하고, 어제도 출석했으면 attndCnt++ / 아니면 1로 세팅;
         Optional<User> user = userRepo.findById(attendanceDto.getUid());
-        if (user.get().getAttnBefore())
+        if (user.get().getAttenBefore())
             user.get().addAttndCnt();
         else
             user.get().deleteAttnCnt();
@@ -83,9 +84,9 @@ public class AttendanceController {
 
             //만약 이전에 출석체크 되어있으면 cnt++ /  아니면 0으로
             if(user.getIsAttend() == true )
-                user.attndBefore(true);
+                user.attenBefore(true);
             else
-                user.attndBefore(false);
+                user.attenBefore(false);
 
             // 출석상태 다시 false로
             user.attendDone(false);
