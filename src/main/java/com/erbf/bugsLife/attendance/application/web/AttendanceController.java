@@ -55,7 +55,7 @@ public class AttendanceController {
 
         //전에도 출석했었나 체크하고, 어제도 출석했으면 attndCnt++ / 아니면 1로 세팅;
         Optional<User> user = userRepo.findById(attendanceDto.getUid());
-        if (user.get().getAttenBefore())
+        if (user.get().getAttendBefore())
             user.get().addAttndCnt();
         else
             user.get().deleteAttnCnt();
@@ -84,9 +84,9 @@ public class AttendanceController {
 
             //만약 이전에 출석체크 되어있으면 cnt++ /  아니면 0으로
             if(user.getIsAttend() == true )
-                user.attenBefore(true);
+                user.attendBefore(true);
             else
-                user.attenBefore(false);
+                user.attendBefore(false);
 
             // 출석상태 다시 false로
             user.attendDone(false);

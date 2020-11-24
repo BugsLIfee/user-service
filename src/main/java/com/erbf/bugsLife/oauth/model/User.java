@@ -54,7 +54,7 @@ public class User {
 
     private Boolean isAttend = false;
     private int attendCnt =0;
-    private Boolean attenBefore= false;
+    private Boolean attendBefore= false;
 
     @JsonIgnore
     private String password;
@@ -104,8 +104,8 @@ public class User {
         return this;
     }
 
-    public User attenBefore(Boolean check){
-        this.attenBefore = check;
+    public User attendBefore(Boolean check){
+        this.attendBefore = check;
         return this;
     }
 
@@ -129,7 +129,7 @@ public class User {
 		this.level = level;
 		this.isAttend = isAttend;
 		this.attendCnt = attendCnt;
-        this.attenBefore= attenBefore;
+        this.attendBefore= attenBefore;
 		this.enrollDate = enrollDate;
 		this.status = status;
 		this.paymentList = paymentList;
@@ -143,18 +143,12 @@ public class User {
                 .email(this.email)
                 .imageUrl(this.imageUrl)
                 .isAttend(this.isAttend)
-                .attenBefore(this.attnBefore)
+                .attendBefore(this.attendBefore)
                 .attendCnt(this.attendCnt)
                 .emailVerified(this.emailVerified)
                 .point(this.point)
                 .level(this.level)
                 .role(this.role.getName())
-<<<<<<< HEAD
-=======
-                .isAttend(true)
-                .attendCnt(1)
-                .attenBefore(false)
->>>>>>> 0ff33a2cfbec880dbc7d085e77c60ae7422aba04
                 .enrollDate(this.enrollDate)
                 .status(this.status)
                 .pointList(this.pointList.stream().map(Point::toDto).collect(Collectors.toList()))
