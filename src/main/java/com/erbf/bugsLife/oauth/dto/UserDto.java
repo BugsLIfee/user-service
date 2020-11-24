@@ -22,7 +22,7 @@ public class UserDto {
     private boolean emailVerified;
     private boolean isAttend;
     private int attendCnt;
-    private boolean attenBefore;
+    private boolean attendBefore;
     private String password;
     private int point;
     private String role;

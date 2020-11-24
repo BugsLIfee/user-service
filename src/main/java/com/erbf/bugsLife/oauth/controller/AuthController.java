@@ -72,6 +72,9 @@ public class AuthController {
         	.emailVerified(false)
         	.provider(AuthProvider.local)
         	.role(Role.USER)
+                .isAttend(false)
+                .attenBefore(false)
+                .attendCnt(0)
         	.enrollDate(LocalDateTime.now())
         	.password(passwordEncoder.encode(signUpRequest.getPassword()))
         	.build();
