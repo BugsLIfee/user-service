@@ -110,7 +110,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers("/",
                         "/api/freeboard/**",
-                    	"/user/other/**",
+                        "/user/members",
+                        "/user/other/**",
                     	"/api/**",
                      	"/api/tag/**",
                         "/error",

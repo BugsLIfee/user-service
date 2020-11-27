@@ -41,7 +41,7 @@ public class UserController {
     }
 
     @GetMapping("/members")
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     public List<UserDto> getUserList(){
         return userService.selectAll().stream().map(User::toDto).collect(Collectors.toList());
     }
